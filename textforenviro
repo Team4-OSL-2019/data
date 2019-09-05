@@ -1,0 +1,28 @@
+
+#North atlantic (temperature)
+MetO-NWS-PHY-mm-TEM 
+
+python -m motuclient --motu http://my.cmems-du.eu/motu-web/Motu --service-id NORTHWESTSHELF_REANALYSIS_PHY_004_009-TDS --product-id MetO-NWS-PHY-mm-TEM --longitude-min -19.88888931274414 --longitude-max 12.999670028686523 --latitude-min 40.06666946411133 --latitude-max 65.00125122070312 --date-min "2018-11-16 00:00:00" --date-max "2018-11-16 00:00:00" --depth-min -1 --depth-max 1 --variable thetao --out-dir <OUTPUT_DIRECTORY> --out-name <OUTPUT_FILENAME> --user <USERNAME> --pwd <PASSWORD>
+
+#North atlantic (Phytoplankton)
+
+METO-NWS-BIO-MM-PHYT 
+
+python -m motuclient --motu http://my.cmems-du.eu/motu-web/Motu --service-id NORTHWESTSHELF_REANALYSIS_BIO_004_011-TDS --product-id MetO-NWS-BIO-mm-PHYT --longitude-min -19.88888931274414 --longitude-max 12.999670028686523 --latitude-min 40.06666946411133 --latitude-max 65.00125122070312 --date-min "2018-11-16 00:00:00" --date-max "2018-11-16 00:00:00" --depth-min -1 --depth-max 1 --variable phyc --out-dir <OUTPUT_DIRECTORY> --out-name <OUTPUT_FILENAME> --user <USERNAME> --pwd <PASSWORD>
+
+
+#Med (phyto)
+
+SV03-MED-OGS-BIO-REAN-M
+
+python -m motuclient --motu http://my.cmems-du.eu/motu-web/Motu --service-id MEDSEA_REANALYSIS_BIO_006_008-TDS --product-id sv03-med-ogs-bio-rean-m --longitude-min -5.5625 --longitude-max 36.25 --latitude-min 30.1875 --latitude-max 45.9375 --date-min "2017-11-01 00:00:00" --date-max "2017-11-01 00:00:00" --depth-min 1.472 --depth-max 1.4722 --variable ppn --out-dir <OUTPUT_DIRECTORY> --out-name <OUTPUT_FILENAME> --user <USERNAME> --pwd <PASSWORD>
+
+
+#Med (temperature)
+
+sv03-med-ingv-tem-rean-m 
+
+python -m motuclient --motu http://my.cmems-du.eu/motu-web/Motu --service-id MEDSEA_REANALYSIS_PHYS_006_004-TDS --product-id sv03-med-ingv-tem-rean-m --longitude-min -6 --longitude-max 36.25 --latitude-min 30.1875 --latitude-max 45.9375 --date-min "2017-12-16 00:00:00" --date-max "2017-12-16 00:00:00" --depth-min 1.472 --depth-max 1.4722 --variable votemper --out-dir <OUTPUT_DIRECTORY> --out-name <OUTPUT_FILENAME> --user <USERNAME> --pwd <PASSWORD>
+
+
+
